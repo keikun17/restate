@@ -1,0 +1,8 @@
+%h1 Properties
+
+.toolbar
+  %ul.inline
+    %li.clear
+      = link_to_unless_current "Add new property", new_admin_property_path
+    %li.clear
+      = link_to_unless_current "Properties List", admin_properties_path

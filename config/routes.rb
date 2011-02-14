@@ -4,7 +4,7 @@ Restate::Application.routes.draw do
   root :to => "main#index"
   
   resource :admin, :controller => "Admin::Main" do
-    resources :properties
+    resources :properties, :controller => "Admin::Properties"
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.

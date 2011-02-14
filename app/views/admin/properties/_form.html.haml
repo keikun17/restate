@@ -1,0 +1,16 @@
+= fields_for @property do |p|
+  %fieldset
+    %legend
+      Basic Info:
+    %ul
+      %li
+        = p.label :name
+        = p.text_field :name
+        
+      %li
+        = p.label :description
+        = p.text_area :description
+        
+      %li
+        = submit_tag "Save Changes"
+      

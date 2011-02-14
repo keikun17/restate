@@ -1,1 +1,7 @@
-Hello World!
+%h1= "Welcome #{current_admin.email}"
+
+%p What would you like to do today?
+
+%ul
+  %li
+    = link_to "Manage Properties", admin_properties_path

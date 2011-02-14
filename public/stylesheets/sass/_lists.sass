@@ -1,0 +1,28 @@
+
+//LIST TYPES
+ul
+  li
+    &.no-style-type
+      &:before
+        :content none !important
+      &:after
+        :content none !important
+        
+    // used in articles toolbar
+    &.first
+      :padding
+        :left 0 !important
+
+.bulletted
+  :margin
+    :left 20px
+  li
+    :list-style-type disc
+    
+.inline
+  :float left
+  
+  li
+    :display inline
+    :margin
+      :left 20px
