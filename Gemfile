@@ -19,7 +19,9 @@ gem 'pg'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug'
+gem 'linecache19'
+gem 'ruby-debug19'
+
 
 # Bundle the extra gems:
 # gem 'bj'
