@@ -1,4 +1,11 @@
 Restate::Application.routes.draw do
+  devise_for :admins
+
+  root :to => "main#index"
+  
+  resource :admin, :controller => "Admin::Main" do
+    resources :properties
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
