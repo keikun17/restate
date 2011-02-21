@@ -1,4 +1,4 @@
-xdevelopment:
+development:
   adapter: postgresql
   database: restate_development
   username: neo
