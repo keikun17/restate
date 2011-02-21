@@ -1,16 +1,8 @@
-= fields_for @property do |p|
-  %fieldset
-    %legend
-      Basic Info:
-    %ul
-      %li
-        = p.label :name
-        = p.text_field :name
-        
-      %li
-        = p.label :description
-        = p.text_area :description
-        
-      %li
-        = submit_tag "Save Changes"
-      
+= semantic_form_for @property, :url => admin_properties_path do |form|
+  = form.inputs :name => "Property" do
+    = form.input :name
+    = form.input :description
+    = form.input :expires_at
+    
+  = form.buttons do
+    = form.commit_button

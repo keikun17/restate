@@ -20,7 +20,7 @@ class DeviseCreateAdmins < ActiveRecord::Migration
     # add_index :admins, :unlock_token,         :unique => true
     
     Admin.create :email => 'admin@restate.com',
-    :password => 'qwerty'
+    :password => 'qwerty',
     :password_confirmation => 'qwerty'
   end
 

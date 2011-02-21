@@ -6,10 +6,11 @@ gem 'rails', '3.0.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'devise'
-gem 'formtastic', '~> 1.1.0'
+gem 'formtastic', '>= 1.1.0'
 gem 'haml'
 gem 'pg'
-
+gem 'ruby-debug19'
+gem "will_paginate", "~> 3.0.pre2"
 
 
 # Use unicorn as the web server
