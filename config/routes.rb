@@ -1,4 +1,6 @@
 Restate::Application.routes.draw do
+  resources :features
+
   resources :properties
 
   devise_for :users
