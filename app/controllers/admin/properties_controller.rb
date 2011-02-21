@@ -18,4 +18,14 @@ class Admin::PropertiesController < Admin::MainController
       render :action => :new
     end
   end
+  
+  def destroy
+    @property = Property.find(params[:id])
+    if @property.destroy
+      flash[:notice] = "Property has been lost"
+    else
+      flash[:error] = "YOU SHALL NOT PASS!!"
+    end
+    redirect_to admin_properties_path
+  end
 end

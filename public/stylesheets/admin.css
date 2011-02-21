@@ -18,8 +18,12 @@ ul li.first {
 
 body {
   font-size: 13px;
-  font-family: "Arial", "sans-serif";
-  background-color: #a37907; }
+  font-family: verdana, arial, helvetica, sans-serif;
+  background-color: #a37907;
+  line-height: 18px; }
+
+a {
+  text-decoration: none; }
 
 #container {
   width: 900px;
@@ -41,3 +45,19 @@ body {
       position: absolute;
       right: 10px;
       bottom: 10px; }
+  #container table {
+    border: 1px solid black;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; }
+
+#navigation {
+  text-align: center;
+  padding: 0; }
+  #navigation ul li {
+    list-style-type: none;
+    display: inline; }
+    #navigation ul li:after {
+      content: " |"; }
+  #navigation .last:after {
+    content: "" !important; }

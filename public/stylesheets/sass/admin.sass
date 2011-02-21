@@ -7,9 +7,13 @@
 body
   :font
     :size 13px
-    :family "Arial", "sans-serif"
+    :family verdana, arial, helvetica, sans-serif
   :background
     :color #A37907
+  :line-height 18px
+
+a
+  :text-decoration none
 
 #container
   :width 900px
@@ -38,3 +42,27 @@ body
       :position absolute
       :right 10px
       :bottom 10px
+      
+  table
+    :border 1px solid black
+    :width 90%
+    :margin
+      :left auto
+      :right auto
+  
+#navigation
+  :text-align center
+  :padding 0
+  
+  ul
+    li
+      :list-style-type none
+      :display inline        
+    
+      &:after
+        :content " |"
+      
+  .last:after
+    :content "" !important
+  
+
