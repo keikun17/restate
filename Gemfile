@@ -11,7 +11,7 @@ gem 'haml'
 gem 'pg'
 gem 'ruby-debug19'
 gem "will_paginate", "~> 3.0.pre2"
-
+gem 'paperclip'
 
 # Use unicorn as the web server
 # gem 'unicorn'
