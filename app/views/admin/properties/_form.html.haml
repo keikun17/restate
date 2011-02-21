@@ -1,7 +1,7 @@
-= semantic_form_for @property, :url => admin_properties_path do |form|
+= semantic_form_for @property, :url => admin_properties_path, :html => {:multipart => true}  do |form|
   = form.inputs
   
-  = form.semantic_fields_for :property_photos, :html => {:multipart => true} do |property_photo|
+  = form.semantic_fields_for :property_photos do |property_photo|
     = property_photo.input :photo, :as => :file
     
   = form.buttons do
