@@ -6,6 +6,7 @@
       Administration - Restate.ph
    
     = stylesheet_link_tag 'admin.css', 'formtastic.css', 'formtastic_changes.css', :media => 'screen, print'
+    = javascript_include_tag :all
    
 
   %body
@@ -23,7 +24,7 @@
         %ul
           %li= link_to_unless_current "Home", admin_path
           %li= link_to_unless_current "Features", admin_features_path
-          %li= link_to_unless_current "Properties", admin_properties_path
+          %li.last= link_to_unless_current "Properties", admin_properties_path
             
-      
+      = render :partial => 'shared/flash_messages'
       = yield

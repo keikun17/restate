@@ -1,8 +1,23 @@
-%h1 Properties
+%h1 Recent Properties
 
-.toolbar
-  %ul.inline
-    %li.clear
-      = link_to_unless_current "Add new property", new_admin_property_path
-    %li.clear
-      = link_to_unless_current "Properties List", admin_properties_path
+%table{:border => "1px solid black"}
+  %tr
+    %th ID
+    %th Name
+    %th Type
+    %th &nbsp;
+    
+  - @properties.each do |property|
+    %tr
+      %td= property.id
+      %td= property.name
+      %td= property.description
+      %td
+        = link_to("Edit", edit_admin_property_path(property))
+        |
+        = link_to 'Destroy', admin_property_path(property), :confirm => 'Are you sure?', :method => :delete
+        
+%p
+  = link_to("Add a Property", new_admin_property_path)
+  
+= will_paginate @properties
