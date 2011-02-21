@@ -1,0 +1,2 @@
+#PROPERTY
+  rails generate scaffold properties user:references property_type:references date_on_market:date date_off_market:date property_name:string property_description:text garage:boolean parking:boolean room_count:integer price:float price_min:float price_max:float other_property_details:text
