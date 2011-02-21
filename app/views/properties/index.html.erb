@@ -1,0 +1,47 @@
+<h1>Listing properties</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Property type</th>
+    <th>Date on market</th>
+    <th>Date off market</th>
+    <th>Property name</th>
+    <th>Property description</th>
+    <th>Garage</th>
+    <th>Parking</th>
+    <th>Room count</th>
+    <th>Price</th>
+    <th>Price min</th>
+    <th>Price max</th>
+    <th>Other property details</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @properties.each do |property| %>
+  <tr>
+    <td><%= property.user %></td>
+    <td><%= property.property_type %></td>
+    <td><%= property.date_on_market %></td>
+    <td><%= property.date_off_market %></td>
+    <td><%= property.property_name %></td>
+    <td><%= property.property_description %></td>
+    <td><%= property.garage %></td>
+    <td><%= property.parking %></td>
+    <td><%= property.room_count %></td>
+    <td><%= property.price %></td>
+    <td><%= property.price_min %></td>
+    <td><%= property.price_max %></td>
+    <td><%= property.other_property_details %></td>
+    <td><%= link_to 'Show', property %></td>
+    <td><%= link_to 'Edit', edit_property_path(property) %></td>
+    <td><%= link_to 'Destroy', property, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Property', new_property_path %>

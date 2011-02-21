@@ -1,0 +1,31 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: 
+  property_type: 
+  date_on_market: 2011-02-21
+  date_off_market: 2011-02-21
+  property_name: MyString
+  property_description: MyText
+  garage: false
+  parking: false
+  room_count: 1
+  price: 1.5
+  price_min: 1.5
+  price_max: 1.5
+  other_property_details: MyText
+
+two:
+  user: 
+  property_type: 
+  date_on_market: 2011-02-21
+  date_off_market: 2011-02-21
+  property_name: MyString
+  property_description: MyText
+  garage: false
+  parking: false
+  room_count: 1
+  price: 1.5
+  price_min: 1.5
+  price_max: 1.5
+  other_property_details: MyText

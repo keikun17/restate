@@ -10,7 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 3) do
+ActiveRecord::Schema.define(:version => 5) do
+
+  create_table "addresses", :force => true do |t|
+    t.integer  "city_id"
+    t.integer  "province_id"
+    t.integer  "addressable_id"
+    t.string   "addressable_type"
+    t.string   "street_address"
+    t.string   "town"
+    t.string   "building_name"
+    t.integer  "zip_code"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "admins", :force => true do |t|
     t.string   "email",                               :default => "", :null => false
@@ -41,14 +54,18 @@ ActiveRecord::Schema.define(:version => 3) do
 
   create_table "properties", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "property_size_unit_id"
-    t.date     "expires_at"
-    t.string   "name"
-    t.string   "permalink"
-    t.string   "type"
-    t.text     "description"
-    t.float    "property_size_value"
-    t.integer  "year_built"
+    t.integer  "property_type_id"
+    t.date     "date_on_market"
+    t.date     "date_off_market"
+    t.string   "property_name"
+    t.text     "property_description"
+    t.boolean  "garage"
+    t.boolean  "parking"
+    t.integer  "room_count"
+    t.float    "price"
+    t.float    "price_min"
+    t.float    "price_max"
+    t.text     "other_property_details"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

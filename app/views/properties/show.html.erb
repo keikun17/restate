@@ -1,0 +1,70 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @property.user %>
+</p>
+
+<p>
+  <b>Property type:</b>
+  <%= @property.property_type %>
+</p>
+
+<p>
+  <b>Date on market:</b>
+  <%= @property.date_on_market %>
+</p>
+
+<p>
+  <b>Date off market:</b>
+  <%= @property.date_off_market %>
+</p>
+
+<p>
+  <b>Property name:</b>
+  <%= @property.property_name %>
+</p>
+
+<p>
+  <b>Property description:</b>
+  <%= @property.property_description %>
+</p>
+
+<p>
+  <b>Garage:</b>
+  <%= @property.garage %>
+</p>
+
+<p>
+  <b>Parking:</b>
+  <%= @property.parking %>
+</p>
+
+<p>
+  <b>Room count:</b>
+  <%= @property.room_count %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @property.price %>
+</p>
+
+<p>
+  <b>Price min:</b>
+  <%= @property.price_min %>
+</p>
+
+<p>
+  <b>Price max:</b>
+  <%= @property.price_max %>
+</p>
+
+<p>
+  <b>Other property details:</b>
+  <%= @property.other_property_details %>
+</p>
+
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>
