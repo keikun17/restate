@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<% @property.property_photos.each do |photo| %>
+  <%= image_tag photo.photo.url %>
+<% end %>
+
 <p>
   <b>User:</b>
   <%= @property.user %>
@@ -27,7 +31,7 @@
 
 <p>
   <b>Property description:</b>
-  <%= @property.escription %>
+  <%= @property.description %>
 </p>
 
 <p>

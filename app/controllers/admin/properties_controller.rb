@@ -6,6 +6,7 @@ class Admin::PropertiesController < Admin::MainController
   
   def new
     @property = Property.new
+    @property.property_photos.build
   end
   
   def create
