@@ -1,0 +1,5 @@
+development:
+  adapter: postgresql
+  database: restate_development
+  username: Mengsk
+  host: localhost
