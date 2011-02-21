@@ -6,3 +6,6 @@
   
 #PROPERTY FEATURES  
   rails generate scaffold property_feature value:float description:text property:references feature:references
+  
+#PROPERTY TYPES
+  rails generate scaffold property_type code:string description:text
