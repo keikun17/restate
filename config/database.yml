@@ -1,7 +1,8 @@
-development:
+xdevelopment:
   adapter: postgresql
   database: restate_development
-  username: Mengsk
+  username: neo
+  password: neo
   host: localhost
 
 test:
