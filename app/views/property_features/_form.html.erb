@@ -1,0 +1,33 @@
+<%= form_for(@property_feature) do |f| %>
+  <% if @property_feature.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@property_feature.errors.count, "error") %> prohibited this property_feature from being saved:</h2>
+
+      <ul>
+      <% @property_feature.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :value %><br />
+    <%= f.text_field :value %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :property %><br />
+    <%= f.text_field :property %>
+  </div>
+  <div class="field">
+    <%= f.label :feature %><br />
+    <%= f.text_field :feature %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -3,4 +3,6 @@
   
 #FEATURES
   rails generate scaffold features name:string description:text
-  rails generate property_features value:float description:text property:references feature:references
+  
+#PROPERTY FEATURES  
+  rails generate scaffold property_feature value:float description:text property:references feature:references

@@ -1,4 +1,6 @@
 Restate::Application.routes.draw do
+  resources :property_features
+
   resources :features
 
   resources :properties

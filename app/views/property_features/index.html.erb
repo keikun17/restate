@@ -1,0 +1,29 @@
+<h1>Listing property_features</h1>
+
+<table>
+  <tr>
+    <th>Value</th>
+    <th>Description</th>
+    <th>Property</th>
+    <th>Feature</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @property_features.each do |property_feature| %>
+  <tr>
+    <td><%= property_feature.value %></td>
+    <td><%= property_feature.description %></td>
+    <td><%= property_feature.property %></td>
+    <td><%= property_feature.feature %></td>
+    <td><%= link_to 'Show', property_feature %></td>
+    <td><%= link_to 'Edit', edit_property_feature_path(property_feature) %></td>
+    <td><%= link_to 'Destroy', property_feature, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Property feature', new_property_feature_path %>

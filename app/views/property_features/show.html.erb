@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Value:</b>
+  <%= @property_feature.value %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @property_feature.description %>
+</p>
+
+<p>
+  <b>Property:</b>
+  <%= @property_feature.property %>
+</p>
+
+<p>
+  <b>Feature:</b>
+  <%= @property_feature.feature %>
+</p>
+
+
+<%= link_to 'Edit', edit_property_feature_path(@property_feature) %> |
+<%= link_to 'Back', property_features_path %>

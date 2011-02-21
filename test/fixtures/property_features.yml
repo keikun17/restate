@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  value: 1.5
+  description: MyText
+  property: 
+  feature: 
+
+two:
+  value: 1.5
+  description: MyText
+  property: 
+  feature: 
