@@ -27,3 +27,17 @@ body {
   margin-right: auto;
   padding: 10px;
   background-color: white; }
+  #container #header {
+    height: 60px;
+    position: relative;
+    border-bottom: double #999999; }
+    #container #header .title {
+      font-size: 36px;
+      font-weight: bold;
+      position: absolute;
+      bottom: 10px;
+      color: #a37907; }
+    #container #header .links {
+      position: absolute;
+      right: 10px;
+      bottom: 10px; }

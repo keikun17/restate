@@ -1,4 +1,4 @@
-class FeaturesController < ApplicationController
+class Admin::FeaturesController < Admin::MainController
   # GET /features
   # GET /features.xml
   def index

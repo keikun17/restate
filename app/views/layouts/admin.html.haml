@@ -3,11 +3,27 @@
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
   %head
     %title
-      = yield(:page_title)
+      Administration - Restate.ph
    
     = stylesheet_link_tag 'admin.css', 'formtastic.css', 'formtastic_changes.css', :media => 'screen, print'
    
 
   %body
     #container
+      #header
+        .title 
+          Restate Admin
+        .links
+          - if admin_signed_in?
+            %strong= current_admin.email
+            |
+            =  link_to("Sign Out", destroy_admin_session_path)
+    
+      #navigation
+        %ul
+          %li= link_to_unless_current "Home", admin_path
+          %li= link_to_unless_current "Features", admin_features_path
+          %li= link_to_unless_current "Properties", admin_properties_path
+            
+      
       = yield

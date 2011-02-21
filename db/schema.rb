@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 6) do
+ActiveRecord::Schema.define(:version => 9) do
 
   create_table "addresses", :force => true do |t|
     t.integer  "city_id"
@@ -44,14 +44,6 @@ ActiveRecord::Schema.define(:version => 6) do
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
-  create_table "condos", :force => true do |t|
-    t.string   "building_name"
-    t.string   "unit_number"
-    t.integer  "floor"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "features", :force => true do |t|
     t.string   "name"
     t.text     "description"
@@ -82,6 +74,30 @@ ActiveRecord::Schema.define(:version => 6) do
     t.text     "description"
     t.integer  "property_id"
     t.integer  "feature_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "property_types", :force => true do |t|
+    t.string   "code"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_property_histories", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "property_id"
+    t.string   "history_type"
+    t.date     "started_at"
+    t.date     "ended_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_searches", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "keywords"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

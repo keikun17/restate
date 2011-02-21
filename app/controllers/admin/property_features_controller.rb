@@ -1,4 +1,4 @@
-class PropertyFeaturesController < ApplicationController
+class Admin::PropertyFeaturesController < Admin::MainController
   # GET /property_features
   # GET /property_features.xml
   def index

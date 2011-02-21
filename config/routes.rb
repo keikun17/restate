@@ -1,18 +1,18 @@
 Restate::Application.routes.draw do
-  resources :property_types
-
-  resources :property_features
-
-  resources :features
-
+ 
   resources :properties
 
   devise_for :users
 
   devise_for :admins
   
-  resource :admin, :controller => "Admin::Main" do
-    resources :properties, :controller => "Admin::Properties"
+  resource :admin, :controller => "Admin::Main"
+  
+  namespace :admin do
+    resources :features, :controller
+    resources :properties do
+      resources :features
+    end    
   end
   # The priority is based upon order of creation:
   # first created -> highest priority.
