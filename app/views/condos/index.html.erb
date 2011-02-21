@@ -1,0 +1,27 @@
+<h1>Listing condos</h1>
+
+<table>
+  <tr>
+    <th>Building name</th>
+    <th>Unit number</th>
+    <th>Floor</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @condos.each do |condo| %>
+  <tr>
+    <td><%= condo.building_name %></td>
+    <td><%= condo.unit_number %></td>
+    <td><%= condo.floor %></td>
+    <td><%= link_to 'Show', condo %></td>
+    <td><%= link_to 'Edit', edit_condo_path(condo) %></td>
+    <td><%= link_to 'Destroy', condo, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Condo', new_condo_path %>

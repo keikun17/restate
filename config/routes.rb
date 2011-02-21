@@ -1,4 +1,6 @@
 Restate::Application.routes.draw do
+  resources :condos
+
   devise_for :admins
 
   resource :admin, :controller => "Admin::Main" do
