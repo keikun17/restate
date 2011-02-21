@@ -1,6 +1,8 @@
 Restate::Application.routes.draw do
-  devise_for :admins
+  devise_for :users
 
+  devise_for :admins
+  
   resource :admin, :controller => "Admin::Main" do
     resources :properties, :controller => "Admin::Properties"
   end

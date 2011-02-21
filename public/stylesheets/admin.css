@@ -18,4 +18,12 @@ ul li.first {
 
 body {
   font-size: 13px;
-  font-family: "Arial", "sans-serif"; }
+  font-family: "Arial", "sans-serif";
+  background-color: #a37907; }
+
+#container {
+  width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background-color: white; }
